@@ -6,12 +6,11 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 17:16:18 by dgutin            #+#    #+#             */
-/*   Updated: 2020/10/05 17:18:37 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/10/05 18:25:14 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 nt		ft_is_separator(char *str, char *charset)
 {
