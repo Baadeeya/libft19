@@ -1,29 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 12:44:39 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/17 14:56:46 by dgutin           ###   ########.fr       */
+/*   Created: 2020/11/17 14:59:07 by dgutin            #+#    #+#             */
+/*   Updated: 2020/11/17 15:46:38 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memcpy(void *dest, const void *src, size_t size)
-{
-	size_t		i;
-	const char	*psrc;
-	char		*pdest;
-
-	i = -1;
-	psrc = src;
-	pdest = dest;
-	if (dest == 0 && src == dest)
-		return (0);
-	while (++i < size)
-		*(pdest + i) = *(psrc + i);
-	return (dest);
-}
+void	*memccpy(void *dest, const void *src, int ch, size_t maxSize)
