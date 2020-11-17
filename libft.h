@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:05:04 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/17 12:12:37 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/17 12:46:03 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@
 #include <stdio.h>
 
 int		ft_atoi(char *str);
+void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+void	*ft_memset(void *pointer, int value, size_t len);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 char	**ft_split(char *str, char *charset);
