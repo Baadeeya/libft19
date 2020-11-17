@@ -6,13 +6,13 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 17:16:18 by dgutin            #+#    #+#             */
-/*   Updated: 2020/10/05 18:25:14 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/17 12:09:59 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-nt		ft_is_separator(char *str, char *charset)
+int		ft_is_separator(char *str, char *charset)
 {
 	while (*charset)
 		if (*str == *charset++)
