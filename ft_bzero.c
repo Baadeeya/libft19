@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:46:31 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/17 12:49:37 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/17 12:55:33 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	bzero(void *s, size_t n)
 {
-	unsigned char*
+	unsigned int	i;
+
+	i = -1;
+	while (++i < n)
+		((unsigned char*)s)[i] = 0;
 }
