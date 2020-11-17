@@ -6,13 +6,13 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 17:12:06 by dgutin            #+#    #+#             */
-/*   Updated: 2020/10/05 17:13:40 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/17 15:57:56 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	unsigned int i;
 
