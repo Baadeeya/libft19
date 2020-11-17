@@ -6,11 +6,11 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 18:49:30 by dgutin            #+#    #+#             */
-/*   Updated: 2020/10/05 18:50:16 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/17 18:26:00 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

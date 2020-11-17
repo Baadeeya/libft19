@@ -6,7 +6,7 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 17:16:18 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/17 12:09:59 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/17 18:28:07 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		ft_is_separator(char *str, char *charset)
 	return (0);
 }
 
-int		ft_strlen(char *str, char *charset)
+int		ft_strleng(char *str, char *charset)
 {
 	int		i;
 
@@ -40,7 +40,7 @@ int		ft_malloc(char *str, char *charset)
 	{
 		while (*str && ft_is_separator(str, charset))
 			str++;
-		i = ft_strlen(str, charset);
+		i = ft_strleng(str, charset);
 		str += i;
 		if (i)
 			word++;
@@ -48,7 +48,7 @@ int		ft_malloc(char *str, char *charset)
 	return (word);
 }
 
-char	*ft_strdup(char *src, int w)
+char	*ft_strdupp(char *src, int w)
 {
 	char	*dest;
 
@@ -75,8 +75,8 @@ char	**ft_split(char *str, char *charset)
 	{
 		while (*str && ft_is_separator(str, charset))
 			str++;
-		w = ft_strlen(str, charset);
-		if (!(arr[i] = ft_strdup(str, w)))
+		w = ft_strleng(str, charset);
+		if (!(arr[i] = ft_strdupp(str, w)))
 			return (NULL);
 		str += w;
 	}
