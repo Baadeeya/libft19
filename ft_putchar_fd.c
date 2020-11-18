@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
+/*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 17:02:36 by dgutin            #+#    #+#             */
-/*   Updated: 2020/10/05 17:06:38 by dgutin           ###   ########.fr       */
+/*   Created: 2020/11/18 15:36:20 by dgutin            #+#    #+#             */
+/*   Updated: 2020/11/18 15:37:48 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned int i;
-
-	i = -1;
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+	if (fd >= 0)
+		write(fd, &c, 1);
 }

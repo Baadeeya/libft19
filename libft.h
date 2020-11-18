@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:05:04 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/18 12:47:34 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/18 15:40:09 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 void	*ft_memset(void *pointer, int value, size_t len);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(char *str, char *charset);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strdup(const char *src);
