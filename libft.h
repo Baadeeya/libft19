@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:05:04 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/18 11:39:21 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/18 12:47:34 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*ft_strcpy(char *dest, char *src);
 char	*ft_strdup(const char *src);
 char	*ft_strjoin(int size, char **strs, char *sep);
 size_t	ft_strlen(const char *str);
+size_t	strlcat(char *dest, const char *src, size_t size);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);

@@ -6,22 +6,59 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 11:54:12 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/18 12:06:56 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/18 13:25:16 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	x;
+	size_t	y;
+	size_t	len;
 
-	i = ft_strlen(dest);
-	x = 0;
-	if 
-	while (src[x] && x < size - 1 && dest[i])
-		dest[i++] = src[x++];
+	len = 0;
+	while(src[len])
+		len++;
+	i = -1;
+	y = 0;
+	while (dest[y] && size > ++i)
+		y++;
+	if (i == size)
+		return (i + len);
+	x = -1;
+	while (src[++x])
+		if (x < size - i - 1)
+			dest[i++] = src[x];
 	dest[i] = '\0';
-	return (ft_strlen(src) + ft_strlen(dest));
+	return (i + x);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int		main(void)
+{
+	const char	src1[] = " les amis!";
+	char		dest1[26] = "Salut,";
+	size_t		size1 = 14;
+
+	const char	src2[] = " les amis!";
+	char		dest2[26] = "Salut,";
+	size_t		size2 = 14;
+
+
+	printf("OR -- %s --", dest1);
+	printf("%s -- ", src1);
+	printf("%zu -- ", strlcat(dest1, src1, size1));
+	printf("%s -- %s\n", dest1, src1);
+
+	printf("FT -- %s --", dest2);
+	printf("%s -- ", src2);
+	printf("%zu -- ", ft_strlcat(dest2, src2, size2));
+	printf("%s -- %s\n", dest2, src2);
+
+	return (0);
 }
