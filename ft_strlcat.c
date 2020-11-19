@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 11:54:12 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/19 14:54:39 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/19 16:46:28 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ int		main(void)
 {
 	const char	src1[] = " les amis!";
 	char		dest1[26] = "Salut,";
-	size_t		size1 = 1;
+	size_t		size1 = 10;
 
 	const char	src2[] = " les amis!";
 	char		dest2[26] = "Salut,";
-	size_t		size2 = 1;
+	size_t		size2 = 10;
 
 
 	printf("OR -- %s --", dest1);

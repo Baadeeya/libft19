@@ -6,7 +6,7 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:37:38 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/19 14:16:45 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/19 17:24:59 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int result;
-	int minus;
-	int i;
+	long long unsigned	result;
+	long long			minus;
+	int 				i;
 
 	result = 0;
 	minus = 1;
