@@ -6,7 +6,7 @@
 #    By: dgutin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/18 16:10:06 by dgutin            #+#    #+#              #
-#    Updated: 2020/11/18 16:19:15 by dgutin           ###   ########.fr        #
+#    Updated: 2020/11/19 11:10:29 by dgutin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,19 +35,17 @@ SRCS		= ft_atoi.c \
 			  ft_toupper.c \
 
 
-OBJS		= ${SRCS:.c=.o}
+OBJS		= $(addprefix srcs/, ${SRCS:.c=.o})
 
-NAME		= libft
-
-CFLAGS		= -Wall -Wextra -Werror
-
-all:		${NAME}
-
-${NAME}:	${OBJS}
-	gcc ${CFLAGS} $^ -o $@
+NAME		= libft.a
 
 .c.o:
-			gcc ${CFLAGS} -c $< -o ${<:.c=.o}
+			gcc -Wall -Wextra -Werror -c -I./includes $< -o ${<:.c=.o}
+
+${NAME}:	${OBJS}
+				ar -rcs $@ $^
+
+all:		${NAME}
 
 clean:
 			rm -f ${OBJS}

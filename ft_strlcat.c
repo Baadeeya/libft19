@@ -6,30 +6,39 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 11:54:12 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/18 15:02:07 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/19 11:59:31 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	x;
-	size_t	y;
+	size_t	len;
 
-	i = 0;
-	y = 0;
-	while (dest[y] && size > i++)
-		y++;
-	if (i <= size)
-		return (i + ft_strlen(src));
-	x = -1;
-	while (src[++x])
-		if (x < size - i - 1)
-			dest[i++] = src[x];
+	i = -1;
+	x = 0;
+	len = 0;
+	while (dest[++i])
+		len++;
+	if (size < len || size == 0)
+		return (0);
+	while (x < size - len - 1)
+		dest[i++] = src[x++];
 	dest[i] = '\0';
-	return (i + x);
+	return (len + ft_strlen(src));
 }
 
 #include <stdio.h>
@@ -58,3 +67,4 @@ int		main(void)
 
 	return (0);
 }
+
