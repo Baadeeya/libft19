@@ -6,24 +6,24 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:44:39 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/17 16:23:01 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/19 15:08:02 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t size)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t		i;
 	const char	*psrc;
-	char		*pdest;
+	char		*pdst;
 
 	i = -1;
 	psrc = src;
-	pdest = dest;
-	if (dest == 0 && src == dest)
+	pdst = dst;
+	if (dst == 0 && src == dst)
 		return (0);
-	while (++i < size)
-		*(pdest + i) = *(psrc + i);
-	return (dest);
+	while (++i < n)
+		*(pdst + i) = *(psrc + i);
+	return (dst);
 }

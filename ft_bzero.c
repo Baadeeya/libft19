@@ -6,13 +6,13 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:46:31 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/17 12:55:33 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/19 14:59:05 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned int	i;
 

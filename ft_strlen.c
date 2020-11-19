@@ -6,18 +6,18 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 17:12:06 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/18 11:39:07 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/19 14:35:40 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
 	unsigned int i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 		i++;
 	return (i);
 }

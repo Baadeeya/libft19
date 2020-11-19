@@ -6,44 +6,35 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 11:54:12 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/19 13:26:27 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/19 14:54:39 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	x;
 	size_t	ret;
 
 	i = 0;
-	if (ft_strlen(dest) < size)
-		ret = ft_strlen(src) + ft_strlen(dest);
+	if (ft_strlen(dst) < dstsize)
+		ret = ft_strlen(src) + ft_strlen(dst);
 	else
-		ret = ft_strlen(src) + size;
-	while (dest[i++] && size)
-		size--;
+		ret = ft_strlen(src) + dstsize;
+	while (dst[i++] && dstsize)
+		dstsize--;
 	i--;
 	x = -1;
-	while (src[++x] && x < size - 1 && size)
-		dest[x] = src[x];
-	if (size)
-		dest[x] = 0;
+	while (src[++x] && x < dstsize - 1 && dstsize)
+		dst[x] = src[x];
+	if (dstsize)
+		dst[x] = 0;
 	return (ret);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -70,4 +61,4 @@ int		main(void)
 
 	return (0);
 }
-
+*/

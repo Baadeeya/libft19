@@ -6,18 +6,18 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 11:54:21 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/17 16:22:52 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/19 14:22:25 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *pointer, int value, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *ptr;
+	unsigned char *p;
 
-	ptr = pointer;
+	p = b;
 	while (len--)
-		*ptr++ = (unsigned char)value;
-	return (pointer);
+		*p++ = (unsigned char)c;
+	return (b);
 }

@@ -6,42 +6,42 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 17:16:18 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/17 18:28:07 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/19 14:29:29 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_is_separator(char *str, char *charset)
+int		ft_is_separator(char const *s, char *c)
 {
-	while (*charset)
-		if (*str == *charset++)
+	while (*c)
+		if (*s == *c++)
 			return (1);
 	return (0);
 }
 
-int		ft_strleng(char *str, char *charset)
+int		ft_strleng(char const *s, char *c)
 {
 	int		i;
 
 	i = 0;
-	while (str[i] && !ft_is_separator(str + i, charset))
+	while (s[i] && !ft_is_separator(s + i, c))
 		i++;
 	return (i);
 }
 
-int		ft_malloc(char *str, char *charset)
+int		ft_malloc(const char *s, char *c)
 {
 	int		i;
 	int		word;
 
 	word = 0;
-	while (*str)
+	while (*s)
 	{
-		while (*str && ft_is_separator(str, charset))
-			str++;
-		i = ft_strleng(str, charset);
-		str += i;
+		while (*s && ft_is_separator(s, c))
+			s++;
+		i = ft_strleng(s, c);
+		s += i;
 		if (i)
 			word++;
 	}
@@ -60,25 +60,25 @@ char	*ft_strdupp(char *src, int w)
 	return (dest);
 }
 
-char	**ft_split(char *str, char *charset)
+char	**ft_split(char *s, char *c)
 {
 	char	**arr;
 	int		i;
 	int		w;
 	int		len;
 
-	len = ft_malloc(str, charset);
+	len = ft_malloc(s, c);
 	if (!(arr = malloc((len + 1) * sizeof(char*))))
 		return (NULL);
 	i = -1;
 	while (++i < len)
 	{
-		while (*str && ft_is_separator(str, charset))
-			str++;
-		w = ft_strleng(str, charset);
-		if (!(arr[i] = ft_strdupp(str, w)))
+		while (*s && ft_is_separator(s, c))
+			s++;
+		w = ft_strleng(s, c);
+		if (!(arr[i] = ft_strdupp(s, w)))
 			return (NULL);
-		str += w;
+		s += w;
 	}
 	arr[len] = 0;
 	return (arr);
