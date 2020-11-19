@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 11:54:12 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/19 11:59:31 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/19 13:26:27 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,22 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	x;
-	size_t	len;
+	size_t	ret;
 
-	i = -1;
-	x = 0;
-	len = 0;
-	while (dest[++i])
-		len++;
-	if (size < len || size == 0)
-		return (0);
-	while (x < size - len - 1)
-		dest[i++] = src[x++];
-	dest[i] = '\0';
-	return (len + ft_strlen(src));
+	i = 0;
+	if (ft_strlen(dest) < size)
+		ret = ft_strlen(src) + ft_strlen(dest);
+	else
+		ret = ft_strlen(src) + size;
+	while (dest[i++] && size)
+		size--;
+	i--;
+	x = -1;
+	while (src[++x] && x < size - 1 && size)
+		dest[x] = src[x];
+	if (size)
+		dest[x] = 0;
+	return (ret);
 }
 
 #include <stdio.h>
@@ -48,11 +51,11 @@ int		main(void)
 {
 	const char	src1[] = " les amis!";
 	char		dest1[26] = "Salut,";
-	size_t		size1 = 4;
+	size_t		size1 = 1;
 
 	const char	src2[] = " les amis!";
 	char		dest2[26] = "Salut,";
-	size_t		size2 = 4;
+	size_t		size2 = 1;
 
 
 	printf("OR -- %s --", dest1);
