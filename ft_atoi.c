@@ -6,14 +6,13 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:37:38 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/23 14:33:38 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/23 15:33:22 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int					ft_atoi(const char *str)
-
 {
 	int					i;
 	int					minus;
@@ -22,7 +21,6 @@ int					ft_atoi(const char *str)
 	minus = 1;
 	i = 0;
 	result = 0;
-
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
 	if (str[i] == '+' || str[i] == '-')
@@ -34,7 +32,6 @@ int					ft_atoi(const char *str)
 		if (result > LLONG_MAX && minus == 1)
 			return (-1);
 		else if (result > LLONG_MAX && minus == -1)
-
 			return (0);
 	}
 	return ((int)(minus * result));
