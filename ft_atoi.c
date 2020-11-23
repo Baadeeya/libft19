@@ -6,40 +6,36 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:37:38 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/23 13:56:30 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/23 14:33:38 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
-{
-	long long		result;
-	long			minus;
-	int 			i;
+int					ft_atoi(const char *str)
 
-	result = 0;
+{
+	int					i;
+	int					minus;
+	unsigned long long	result;
+
 	minus = 1;
 	i = 0;
-	while ((str[i] == ' ') || (str[i] >= '\t' && str[i] <= '\r'))
+	result = 0;
+
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
-	while ((str[i] == '-') || (str[i] == '+'))
-	{
-		if (str[i] == '-')
+	if (str[i] == '+' || str[i] == '-')
+		if (str[i++] == '-')
 			minus *= -1;
-		i++;
-	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result = result * 10 + (str[i] - '0');
-		i++;
+		result = (result * 10) + (str[i++] - '0');
+		if (result > LLONG_MAX && minus == 1)
+			return (-1);
+		else if (result > LLONG_MAX && minus == -1)
+
+			return (0);
 	}
-	while (result > 4294967295 || result < -4294967295)
-	{
-		if (result < -4294967296)
-			result *= -1;
-		if (result > 4294967295)
-			result -= 4294967296;
-	}
-	return (minus * result);
+	return ((int)(minus * result));
 }
