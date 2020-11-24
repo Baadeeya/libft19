@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:05:04 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/23 14:33:13 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/24 18:15:45 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -33,12 +34,19 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strrchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
+char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
