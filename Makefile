@@ -6,12 +6,13 @@
 #    By: dgutin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/18 16:10:06 by dgutin            #+#    #+#              #
-#    Updated: 2020/11/23 15:14:43 by dgutin           ###   ########.fr        #
+#    Updated: 2020/11/24 16:28:35 by dgutin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		= ft_atoi.c \
 			  ft_bzero.c \
+			  ft_calloc.c \
 			  ft_isalnum.c \
 			  ft_isalpha.c \
 			  ft_isascii.c \
@@ -24,8 +25,10 @@ SRCS		= ft_atoi.c \
 			  ft_memmove.c \
 			  ft_memset.c \
 			  ft_putchar_fd.c \
+			  ft_putnbr_fd.c \
 			  ft_putstr_fd.c \
 			  ft_strchr.c \
+			  ft_strnstr.c \
 			  ft_strrchr.c \
 			  ft_strdup.c \
 			  ft_strlcat.c \
@@ -52,7 +55,7 @@ $(NAME): $(OBJS)
 
 all:	${NAME}
 clean:
-	rm -f$(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
