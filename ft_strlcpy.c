@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 11:37:47 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/23 15:32:42 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/24 17:35:13 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	x;
 
+	if (!dst || !src)
+		return (0);
 	x = 0;
 	while (src[x])
 		x++;
