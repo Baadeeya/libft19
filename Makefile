@@ -6,7 +6,7 @@
 #    By: dgutin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/18 16:10:06 by dgutin            #+#    #+#              #
-#    Updated: 2020/11/24 16:28:35 by dgutin           ###   ########.fr        #
+#    Updated: 2020/11/24 16:52:52 by dgutin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRCS		= ft_atoi.c \
 			  ft_strnstr.c \
 			  ft_strrchr.c \
 			  ft_strdup.c \
+			  ft_strjoin.c \
 			  ft_strlcat.c \
 			  ft_strlcpy.c \
 			  ft_strlen.c \
