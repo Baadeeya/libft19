@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 16:31:50 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/24 16:38:31 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/25 15:06:22 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	foin = haystack;
 	if (*needle == 0)
 		return ((char *)haystack);
-	while (++i < len)
+	while (++i <= len)
 	{
 		if (*aiguille == '\0')
 			return ((char *)(foin - (aiguille - needle)));

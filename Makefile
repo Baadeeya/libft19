@@ -6,7 +6,7 @@
 #    By: dgutin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/18 16:10:06 by dgutin            #+#    #+#              #
-#    Updated: 2020/11/25 11:55:48 by dgutin           ###   ########.fr        #
+#    Updated: 2020/11/25 15:39:22 by dgutin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRCS		= ft_atoi.c \
 			  ft_isascii.c \
 			  ft_isdigit.c \
 			  ft_isprint.c \
+			  ft_itoa.c \
 			  ft_memccpy.c \
 			  ft_memchr.c \
 			  ft_memcmp.c \
@@ -39,6 +40,7 @@ SRCS		= ft_atoi.c \
 			  ft_strlcpy.c \
 			  ft_strlen.c \
 			  ft_strncmp.c \
+			  ft_strtrim.c \
 			  ft_substr.c \
 			  ft_tolower.c \
 			  ft_toupper.c \
