@@ -6,7 +6,7 @@
 #    By: dgutin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/18 16:10:06 by dgutin            #+#    #+#              #
-#    Updated: 2020/11/25 15:39:22 by dgutin           ###   ########.fr        #
+#    Updated: 2020/11/26 14:18:58 by dgutin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,27 +46,44 @@ SRCS		= ft_atoi.c \
 			  ft_toupper.c \
 
 
-OBJS = ${SRCS:.c=.o}
+SRCS_BONUS	= ft_lstnew.c \
+			  ft_lstadd_front.c \
+			  ft_lstsize.c \
+			  ft_lstlast.c \
+			  ft_lstadd_back.c \
+			  ft_lstdelone.c \
+			  ft_lstclear.c \
+			  ft_lstiter.c \
+			  ft_lstmap.c \
 
-NAME = libft.a
 
-CC = gcc
+OBJS		= ${SRCS:.c=.o}
 
-CFLAGS = -Wall -Wextra -Werror
+OBJS_BONUS	= ${SRCS_BONUS:.c=.o} 
 
-$(NAME): $(OBJS)
-	ar -rcs $@ $^
+NAME		= libft.a
+
+CC			= gcc
+
+CFLAGS		= -Wall -Wextra -Werror
+
+$(NAME):	$(OBJS)
+			ar -rcs $@ $^
 
 .c.o:
-	${CC} ${CFLAGS} -c -I./includes $< -o ${<:.c=.o}
+			${CC} ${CFLAGS} -c -I./includes $< -o ${<:.c=.o}
 
-all:	${NAME}
+all:		${NAME}
+
+bonus:		$(OBJS_BONUS)
+			ar -rcs $(NAME) $(OBJS_BONUS)
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
