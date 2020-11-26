@@ -6,7 +6,7 @@
 #    By: dgutin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/18 16:10:06 by dgutin            #+#    #+#              #
-#    Updated: 2020/11/26 14:18:58 by dgutin           ###   ########.fr        #
+#    Updated: 2020/11/26 17:05:27 by dgutin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,20 +44,31 @@ SRCS		= ft_atoi.c \
 			  ft_substr.c \
 			  ft_tolower.c \
 			  ft_toupper.c \
+			  ft_lstnew_bonus.c \
+			  ft_lstadd_front_bonus.c \
+			  ft_lstsize_bonus.c \
+			  ft_lstlast_bonus.c \
+			  ft_lstadd_back_bonus.c \
+			  ft_lstdelone_bonus.c \
+			  ft_lstclear_bonus.c \
+			  ft_lstiter_bonus.c \
+			  ft_lstmap_bonus.c \
 
 
-SRCS_BONUS	= ft_lstnew.c \
-			  ft_lstadd_front.c \
-			  ft_lstsize.c \
-			  ft_lstlast.c \
-			  ft_lstadd_back.c \
-			  ft_lstdelone.c \
-			  ft_lstclear.c \
-			  ft_lstiter.c \
-			  ft_lstmap.c \
 
 
-OBJS		= ${SRCS:.c=.o}
+SRCS_BONUS	= ft_lstnew_bonus.c \
+			  ft_lstadd_front_bonus.c \
+			  ft_lstsize_bonus.c \
+			  ft_lstlast_bonus.c \
+			  ft_lstadd_back_bonus.c \
+			  ft_lstdelone_bonus.c \
+			  ft_lstclear_bonus.c \
+			  ft_lstiter_bonus.c \
+			  ft_lstmap_bonus.c \
+
+
+OBJS		= ${SRCS:.c=.o} 
 
 OBJS_BONUS	= ${SRCS_BONUS:.c=.o} 
 
