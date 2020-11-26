@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 16:25:33 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/26 17:07:07 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/26 17:27:52 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst)
+	if (!lst || !new)
 		return ;
 	new->next = *lst;
-	lst = &new;
+	*lst = new;
 }
