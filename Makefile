@@ -6,7 +6,7 @@
 #    By: dgutin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/18 16:10:06 by dgutin            #+#    #+#              #
-#    Updated: 2020/11/26 17:43:40 by dgutin           ###   ########.fr        #
+#    Updated: 2020/11/26 18:40:58 by dgutin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,6 @@ SRCS		= ft_atoi.c \
 			  ft_lstdelone_bonus.c \
 			  ft_lstclear_bonus.c \
 			  ft_lstiter_bonus.c \
-			  ft_lstmap_bonus.c \
 
 
 
