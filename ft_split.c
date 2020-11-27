@@ -6,7 +6,7 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 17:16:18 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/26 14:46:48 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/27 12:36:16 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,13 @@ int		ft_malloc(const char *s, char c)
 	return (word);
 }
 
-char	**ft_free(char **str)
+char	**ft_free(char **str, int x)
 {
 	int		i;
 
-	i = 0;
-	while (str[i++])
-	{
+	i = -1;
+	while (++i < x)
 		free(str[i]);
-		str[i] = NULL;
-	}
 	free(str);
 	return (NULL);
 }
@@ -80,7 +77,7 @@ char	**ft_split(const char *s, char c)
 			s++;
 		w = ft_strleng(s, c);
 		if (!(arr[i] = ft_substr(s, 0, w)))
-			return (ft_free(arr));
+			return (ft_free(arr, i));
 		s += w;
 	}
 	arr[len] = 0;
