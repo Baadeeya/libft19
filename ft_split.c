@@ -6,20 +6,20 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 17:16:18 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/27 12:36:16 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/11/30 20:27:36 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_is_separator(char const *s, char c)
+static int	ft_is_separator(char const *s, char c)
 {
 	if (*s == c)
 		return (1);
 	return (0);
 }
 
-int		ft_strleng(char const *s, char c)
+static int	ft_strleng(char const *s, char c)
 {
 	int		i;
 
@@ -29,7 +29,7 @@ int		ft_strleng(char const *s, char c)
 	return (i);
 }
 
-int		ft_malloc(const char *s, char c)
+static int	ft_malloc(const char *s, char c)
 {
 	int		i;
 	int		word;
@@ -47,7 +47,7 @@ int		ft_malloc(const char *s, char c)
 	return (word);
 }
 
-char	**ft_free(char **str, int x)
+static char	**ft_free(char **str, int x)
 {
 	int		i;
 
@@ -58,7 +58,7 @@ char	**ft_free(char **str, int x)
 	return (NULL);
 }
 
-char	**ft_split(const char *s, char c)
+char		**ft_split(const char *s, char c)
 {
 	char	**arr;
 	int		i;
