@@ -6,13 +6,28 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 12:06:01 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/27 15:30:54 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/12/03 14:58:26 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del)(void *))
+static void	ft_freeall(t_list *lst)
+{
+	t_list *tmp;
+
+	tmp = NULL;
+	ft_lstnew(tmp->content);
+	while (lst)
+	{
+		tmp = lst;
+		free(lst->content);
+		free(lst);
+		lst = tmp->next;
+	}
+}
+
+t_list		*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del)(void *))
 {
 	t_list	*list;
 	t_list	*ptr;
@@ -26,7 +41,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del)(void *))
 	{
 		if (!(list = ft_lstnew(f(lst->content))))
 		{
-			ft_lstclear(&list, del);
+			if (del)
+				ft_lstclear(&list, del);
+			else
+				ft_freeall(list);
 			return (NULL);
 		}
 		ft_lstadd_back(&ptr, list);
