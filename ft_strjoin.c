@@ -6,7 +6,7 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 18:53:35 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/24 16:55:29 by dgutin           ###   ########.fr       */
+/*   Updated: 2020/12/04 16:25:09 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	if (!(cat = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)))))
+	if (!(cat = malloc(sizeof(char) * (ft_strlen(s1) + 1 + ft_strlen(s2)))))
 		return (NULL);
 	i = -1;
 	while (s1[++i])
