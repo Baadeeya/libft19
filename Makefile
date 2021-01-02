@@ -6,7 +6,7 @@
 #    By: dgutin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/18 16:10:06 by dgutin            #+#    #+#              #
-#    Updated: 2020/11/30 20:28:11 by dgutin           ###   ########.fr        #
+#    Updated: 2021/01/01 15:57:38 by dgutin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,8 +76,6 @@ all:		${NAME}
 
 bonus:		$(OBJS_BONUS)
 			ar -rcs $(NAME) $(OBJS_BONUS)
-
-full:		all bonus
 
 clean:
 	rm -f $(OBJS) $(OBJS_BONUS)
