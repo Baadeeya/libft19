@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 12:06:01 by dgutin            #+#    #+#             */
-/*   Updated: 2020/12/03 14:58:26 by dgutin           ###   ########.fr       */
+/*   Updated: 2021/01/19 18:02:30 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del)(void *))
 	if (!lst)
 		return (NULL);
 	if (!f)
-		return (lst);
+		return (NULL);
 	ptr = NULL;
 	while (lst)
 	{
