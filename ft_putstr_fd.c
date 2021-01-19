@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:38:06 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/24 17:33:28 by dgutin           ###   ########.fr       */
+/*   Updated: 2021/01/19 16:23:02 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,7 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (s)
 	{
-		while (*s)
-		{
-			ft_putchar_fd(*s, fd);
-			s++;
-		}
+		write(fd, s, ft_strlen(s));
+		s++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:19:39 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/24 17:20:43 by dgutin           ###   ########.fr       */
+/*   Updated: 2021/01/19 16:27:09 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	if (s)
 	{
-		ft_putstr_fd(s, fd);
-		ft_putchar_fd('\n', fd);
+		write(fd, s, ft_strlen(s));
+		write(fd, "\n", 1);
 	}
 }
