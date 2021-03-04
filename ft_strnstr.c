@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstrlol.c                                    :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 15:29:11 by dgutin            #+#    #+#             */
-/*   Updated: 2021/03/04 15:52:39 by dgutin           ###   ########.fr       */
+/*   Updated: 2021/03/04 15:56:19 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (!(n = ft_strlen(needle)));
+	if (!(n = ft_strlen(needle)))
 		return ((char *)haystack);
 	while (haystack[i++] && n <= len--)
 	{
