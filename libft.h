@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:05:04 by dgutin            #+#    #+#             */
-/*   Updated: 2021/04/02 13:46:13 by dgutin           ###   ########.fr       */
+/*   Updated: 2021/04/02 13:51:50 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <string.h>
 # include <limits.h>
 
-typedef structs_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
