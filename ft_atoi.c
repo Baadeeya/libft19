@@ -6,13 +6,13 @@
 /*   By: dgutin <dgutin@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:37:38 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/30 20:31:11 by dgutin           ###   ########.fr       */
+/*   Updated: 2021/04/02 13:09:25 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int					ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int					i;
 	int					minus;

@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:36:22 by dgutin            #+#    #+#             */
-/*   Updated: 2021/01/19 18:00:44 by dgutin           ###   ########.fr       */
+/*   Updated: 2021/04/02 13:38:19 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	if (!f)
 		return (ft_strdup(s));
-	if (!(str = (char*)malloc((sizeof(char) * (ft_strlen(s) + 1)))))
+	str = (char *)malloc((sizeof(char) * (ft_strlen(s) + 1)));
+	if (!str)
 		return (NULL);
 	i = -1;
 	while (s[++i])

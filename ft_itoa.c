@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:39:50 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/30 20:30:52 by dgutin           ###   ########.fr       */
+/*   Updated: 2021/04/02 13:23:36 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_count(int n)
 	return (i);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	long			i;
 	unsigned long	nb;
@@ -44,7 +44,8 @@ char		*ft_itoa(int n)
 		neg = 1;
 	}
 	i = ft_count(n);
-	if (!(str = (char*)malloc(sizeof(char) * (ft_count(n) + 1))))
+	str = (char *)malloc(sizeof(char) * (ft_count(n) + 1));
+	if (!str)
 		return (NULL);
 	str[i] = '\0';
 	if (n < 0)

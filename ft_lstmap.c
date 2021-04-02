@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 12:06:01 by dgutin            #+#    #+#             */
-/*   Updated: 2021/01/19 18:02:30 by dgutin           ###   ########.fr       */
+/*   Updated: 2021/04/02 13:25:18 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	ft_freeall(t_list *lst)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	tmp = NULL;
 	ft_lstnew(tmp->content);
@@ -27,7 +27,7 @@ static void	ft_freeall(t_list *lst)
 	}
 }
 
-t_list		*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del)(void *))
 {
 	t_list	*list;
 	t_list	*ptr;
@@ -39,7 +39,8 @@ t_list		*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del)(void *))
 	ptr = NULL;
 	while (lst)
 	{
-		if (!(list = ft_lstnew(f(lst->content))))
+		list = ft_lstnew(f(lst->content));
+		if (!list)
 		{
 			if (del)
 				ft_lstclear(&list, del);

@@ -6,7 +6,7 @@
 /*   By: dgutin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:46:31 by dgutin            #+#    #+#             */
-/*   Updated: 2020/11/19 14:59:05 by dgutin           ###   ########.fr       */
+/*   Updated: 2021/04/02 13:20:35 by dgutin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_bzero(void *s, size_t n)
 
 	i = -1;
 	while (++i < n)
-		((unsigned char*)s)[i] = 0;
+		((unsigned char *)s)[i] = 0;
 }
