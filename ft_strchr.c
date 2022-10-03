@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:06:31 by dagutin           #+#    #+#             */
-/*   Updated: 2022/10/03 13:06:36 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/10/03 18:25:06 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
+	if (c > 256)
+		c -= 256;
 	i = -1;
 	if (c == 0)
 		return ((char *)s + ft_strlen((char *)s));
