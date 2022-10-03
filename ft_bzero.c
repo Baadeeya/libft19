@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:01:08 by dagutin           #+#    #+#             */
-/*   Updated: 2022/10/03 13:01:11 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/10/03 13:32:13 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = -1;
 	while (++i < n)
