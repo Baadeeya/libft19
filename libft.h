@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:08:52 by dagutin           #+#    #+#             */
-/*   Updated: 2022/10/03 13:08:55 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/10/03 13:52:10 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char				*ft_strnstr(const char *haystack, const char *needle, \
 					size_t len);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strdup(const char *s1);
+void				ft_striteri(char *s, void (*f)(unsigned int, char*));
 char				*ft_strjoin(char const *s1, char const *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
