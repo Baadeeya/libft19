@@ -6,7 +6,7 @@
 #    By: dagutin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 13:00:39 by dagutin           #+#    #+#              #
-#    Updated: 2022/10/03 13:00:43 by dagutin          ###   ########.fr        #
+#    Updated: 2022/10/03 13:57:35 by dagutin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRCS		= ft_atoi.c \
 			ft_split.c \
 			ft_strmapi.c \
 			ft_strchr.c \
+			ft_striteri.c \
 			ft_strnstr.c \
 			ft_strrchr.c \
 			ft_strdup.c \

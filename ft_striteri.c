@@ -6,7 +6,7 @@
 /*   By: dagutin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:46:42 by dagutin           #+#    #+#             */
-/*   Updated: 2022/10/03 13:52:19 by dagutin          ###   ########.fr       */
+/*   Updated: 2022/10/03 14:57:19 by dagutin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
+	unsigned int	i;
 
 	if (!s || !f)
 		return ;
 	i = -1;
 	while (s[++i])
-		f(str[i]);
+		f(i, s);
 }
